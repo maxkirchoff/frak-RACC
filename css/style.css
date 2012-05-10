@@ -1,0 +1,40 @@
+body {
+	font-size:13px;
+	font-family: Papyrus,
+             fantasy;
+	width:100%;
+	margin:100px auto;
+}
+
+body.allowed {
+	background: url('../img/partycube.gif') !important;
+}
+
+a.stop {
+	background: #00ff00;
+	font-size: 60px;
+	width: 400px;
+	text-align:center;
+	font-weight: bold;
+	display: block;
+	clear:both;
+}
+
+a.sound {
+	float: left;
+	width: 200px;
+	padding: 10px 0;
+	margin: 10px;
+	display: block;
+	text-align: center;	
+	background: #ff0000;
+	text-decoration: none;
+}
+
+a:active, a:hover, a {
+	color: #fff;
+}
+
+form {
+	margin: 20px;
+}
