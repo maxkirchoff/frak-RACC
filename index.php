@@ -63,7 +63,9 @@ if ($dh = opendir($upload_dir))
 			$sound_file = $asked_nicely ? $sound_file : "not_nice";
 
 			// After 5 checker
-			$after5only = (substr($name, 0, 6) == "after5");
+			$pruned_name = substr($name, 0, 6);
+                        $after5only = (strcasecmp($pruned_name,"after5") == 0);
+			
 			if (((date('Hi') > '1730') && $after5only) || !$after5only)
 			{
 				echo "<a class='sound' href='" . $sound_file . "'>" . $name . "</a>\n";
