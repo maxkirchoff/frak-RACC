@@ -2,12 +2,10 @@ body {
 	font-size:13px;
 	font-family: Papyrus,
              fantasy;
-	width:100%;
-	margin:100px auto;
 }
 
 body.allowed {
-	background: url('../img/partycube.gif') !important;
+	background: url('../img/partycube.gif');
 }
 
 a.stop {
@@ -37,4 +35,18 @@ a:active, a:hover, a {
 
 form {
 	margin: 20px;
+}
+
+.bear-mode {
+	text-align: center;
+	background: #000;
+	color: #fff;
+}
+
+.bear-mode h1 {
+	font-size: 48pt;
+	color: #ff0000;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 }
