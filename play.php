@@ -3,7 +3,7 @@ require_once("config.php");
 
 $sound = $_POST['filename'];
 $nicely = $_POST['ask'];
-$jenkins = $_POST['jenkins'] ? $_POST['jenkins'] : FALSE;
+$jenkins = isset($_POST['jenkins']) ? $_POST['jenkins'] : FALSE;
 
 if ($sound && $nicely)
 {

@@ -6,7 +6,7 @@
 <head>
 	<title>Media Play-o-lator 5000!</title>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript" src="js/site.js<?php echo "?" . time(); ?>"></script>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/fileuploader.css" rel="stylesheet" type="text/css">
 	<style>
@@ -39,17 +39,10 @@
 			<input type="text" />
 			<input type="submit" value="Say This" />
 		</form>
-		<?php 
-		if ($admin)
-		{ 
-		?>
 			<form id="youtube">
 				<input class="youtubevideo" type="text" />
-				<input type="submit" value="Play YouTube Video" />
+				<input type="submit" value="Play YouTube Video (beta)" />
 			</form>
-		<?php 
-		} 
-		?>
 	<?php
 	}
 	?>
@@ -72,7 +65,7 @@
 <?php
 if (!is_dir($upload_dir))
 {
-	mkdir($upload_dir, 0777);
+	mkdir($upload_dir, 0755);
 }
 
 if ($dh = opendir($upload_dir))
